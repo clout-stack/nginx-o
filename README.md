@@ -52,7 +52,7 @@ nginx.stop().then(function () {
 ```
 
 ### Methods for managing vhosts
-Programmatically ```create, read, update & delete``` vhosts. This will require your Nginx configuration file to require a http section where their is "an ```include directive``` for all .conf files from a certain folder". (We represent this in our library as ```confDir```); [https://kcode.de/wordpress/2033-nginx-configuration-with-includes](More information.)
+Programmatically ```create, read, update & delete``` vhosts. This will require your Nginx configuration file to require a http section where their is "an ```include directive``` for all .conf files from a certain folder". (We represent this in our library as ```confDir```); [More information.](https://kcode.de/wordpress/2033-nginx-configuration-with-includes)
 
 #### Create
 ```
