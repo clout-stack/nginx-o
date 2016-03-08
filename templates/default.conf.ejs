@@ -1,0 +1,18 @@
+# clout service
+server {
+    listen *:{{port}};
+    
+    server_name {{cname}};
+
+    # access_log /var/log/nginx/{{cname}}.access.log;
+    # error_log /var/log/nginx/{{cname}}.error.log;
+
+    location  / {
+        proxy_pass {{proxy_pass}};
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
