@@ -1,0 +1,20 @@
+{
+  "name": "nginx-o",
+  "version": "0.0.1",
+  "description": "Programmatically manipulate a running Nginx instance",
+  "main": "lib/Nginx.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nginx"
+  ],
+  "author": "Muhammad Dadu",
+  "license": "ISC",
+  "dependencies": {
+    "glob": "^7.0.3",
+    "lodash": "^4.6.1",
+    "procinfo": "^0.1.4",
+    "promise": "^7.1.1"
+  }
+}
