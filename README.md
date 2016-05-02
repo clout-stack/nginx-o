@@ -1,4 +1,4 @@
-nginx-o
+nginx-o [![Build Status](https://travis-ci.org/clout-stack/nginx-o.svg?branch=master)](https://travis-ci.org/clout-stack/nginx-o)
 ==================
 
 ###### Programmatically manipulate a running Nginx instance

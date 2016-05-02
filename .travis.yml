@@ -1,0 +1,27 @@
+sudo: required
+dist: trusty
+
+language: node_js
+
+node_js:
+  - "5"
+  - "4.2.0"
+  - "0.12"
+
+cache:
+  - apt
+
+addons:
+  apt:
+    packages:
+      - nginx
+
+install:
+  - sudo apt-get install -y nginx
+
+before_script:
+  - npm install -g grunt
+  - npm install
+
+script:
+  - grunt test
