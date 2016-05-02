@@ -18,12 +18,19 @@ describe('Nginx-o Tests', function() {
 		it('stop nginx if running', function (done) {
 			if (!nginx.online) { return done(); }
 			nginx.once('stopped', done); // add event listner
-			nginx.stop(); // stop nginx
+			nginx.stop() // stop nginx
+				.catch(function (error) {
+					should.not.exist(error);
+				});
 		});
 
 		it('start nginx', function (done) {
+			this.timeout(5000);
 			nginx.once('started', done); // add event listner
-			nginx.start(); // stop nginx
+			nginx.start() // start nginx
+				.catch(function (error) {
+					should.not.exist(error);
+				});
 		});
 	});
 
